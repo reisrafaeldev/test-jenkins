@@ -1,7 +1,7 @@
 pipeline {
     agent any
      tools { 
-        nodejs "node 18.20.3" 
+        nodejs "v18.20.3"  
     }
     
     stages {
@@ -13,15 +13,15 @@ pipeline {
         
         stage('Build') {
             steps {
-                bat "node -v"
-                bat 'npm install'
-                bat 'npm run build'
+                sh "node -v"
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
         
         stage('Run Unit Tests') {
             steps {
-                bat 'npm run test'
+                sh 'npm run test'
             }
         }
     }
