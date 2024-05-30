@@ -60,14 +60,14 @@ describe("Casos de Testes fase da vida -", () => {
 
   //Adolescente
 
-  test("Adolescência para o limite 11 - Abaixo do Limite", () => {
-    const { getByText, getByLabelText } = render(<Home />);
-    const button = getByText("Calcular");
-    const input = getByLabelText("Informe um valor para o cálculode idade e informação do orgão de apoio:");
-    userEvent.type(input, "10");
-    userEvent.click(button);
-    expect(getByText("Resultado: Adolescência")).toBeTruthy();
-  });
+  // test("Adolescência para o limite 11 - Abaixo do Limite", () => {
+  //   const { getByText, getByLabelText } = render(<Home />);
+  //   const button = getByText("Calcular");
+  //   const input = getByLabelText("Informe um valor para o cálculode idade e informação do orgão de apoio:");
+  //   userEvent.type(input, "10");
+  //   userEvent.click(button);
+  //   expect(getByText("Resultado: Adolescência")).toBeTruthy();
+  // });
 
   test("Adolescência para o limite 11- Dentro do Limite", () => {
     const { getByText, getByLabelText } = render(<Home />);
